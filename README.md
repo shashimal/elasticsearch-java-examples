@@ -1,2 +1,2 @@
 # elasticsearch-java-examples
-Elasticsearch Java Examples
+Elasticsearch Java Example with Elastisearch 2.4
