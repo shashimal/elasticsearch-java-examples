@@ -13,14 +13,14 @@ import java.net.UnknownHostException;
 public class ElasticClient {
 
     private final static String ES_HOSTS[] = {"localhost"};
-    private final static int port = 9300;
+    private final static int PORT = 9300;
 
     private static Client client;
 
     public static Client getClient() {
         try {
             client = TransportClient.builder().build()
-                    .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("localhost"), 9300));
+                    .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(ES_HOSTS[0]), PORT));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
